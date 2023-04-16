@@ -1,18 +1,19 @@
-import * as React from "react"
-import { Layout } from "../components/Layout"
-import { StaticImage } from 'gatsby-plugin-image'
+import * as React from "react";
+import { Layout } from "../components/Layout";
+import { StaticImage } from "gatsby-plugin-image";
+import FetchData from "../examples/fetchData";
 
 export default function Home() {
   return (
-  <Layout>
+    <Layout>
       <main className="page">
         <header className="hero">
-          <StaticImage 
-          src="..\assets\images\main.jpeg"
-          alt="eggs"
-          className="hero-img"
-          placeholder="tracedSVG"
-          layout="fullWidth"
+          <StaticImage
+            src="..\assets\images\main.jpeg"
+            alt="eggs"
+            className="hero-img"
+            placeholder="tracedSVG"
+            layout="fullWidth"
           ></StaticImage>
           <div className="hero-container">
             <div className="hero-text">
@@ -21,7 +22,8 @@ export default function Home() {
             </div>
           </div>
         </header>
+        <FetchData />
       </main>
-  </Layout>
-  )
+    </Layout>
+  );
 }
