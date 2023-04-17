@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "Simple Recipes",
-    description: "Nice and Clean rexcipes site",
-    author: "@maxMusterman",
-    person: { name: "Max", age: 45 },
-    simpleData: ["Item1", "Item2"],
+    title: 'Simple Recipes',
+    description: 'Nice and Clean rexcipes site',
+    author: '@maxMusterman',
+    person: { name: 'Max', age: 45 },
+    simpleData: ['Item1', 'Item2'],
     complexData: [
-      { name: "Max", age: 45 },
-      { name: "Susan Anna", age: 60 },
-    ],
+      { name: 'Max', age: 45 },
+      { name: 'Susan Anna', age: 60 }
+    ]
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -29,10 +29,10 @@ module.exports = {
         // The unique name for each instance
         name: `images`,
         // Path to the directory
-        path: `${__dirname}/src/assets/images`,
-      },
-    },
-    {
+        path: `${__dirname}/src/assets/images`
+      }
+    }
+    /*     {
       resolve: `gatsby-source-filesystem`,
       options: {
         // The unique name for each instance
@@ -40,6 +40,6 @@ module.exports = {
         // Path to the directory
         path: `${__dirname}/src/assets/css`,
       },
-    },
-  ],
-};
+    }, */
+  ]
+}

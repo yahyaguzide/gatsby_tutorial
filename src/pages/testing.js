@@ -1,7 +1,6 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/Layout";
-import Gallery from "../examples/gallery";
+import React from 'react'
+import Layout from '../components/Layout'
+import Gallery from '../examples/gallery'
 
 const Testing = () => {
   return (
@@ -10,7 +9,7 @@ const Testing = () => {
         <Gallery />
       </main>
     </Layout>
-  );
-};
+  )
+}
 
-export default Testing;
+export default Testing
