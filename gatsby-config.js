@@ -7,6 +7,11 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+})
+
 module.exports = {
   siteMetadata: {
     title: 'Simple Recipes',
@@ -31,15 +36,14 @@ module.exports = {
         // Path to the directory
         path: `${__dirname}/src/assets/images`
       }
-    }
-    /*     {
-      resolve: `gatsby-source-filesystem`,
+    },
+    {
+      resolve: `gatsby-source-contentful`,
       options: {
-        // The unique name for each instance
-        name: `styles`,
-        // Path to the directory
-        path: `${__dirname}/src/assets/css`,
-      },
-    }, */
+        spaceId: `mz10d8tdkwik`,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_API_KEY
+      }
+    }
   ]
 }

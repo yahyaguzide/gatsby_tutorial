@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import AllRecipes from '../components/AllRecipes'
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
             src="..\assets\images\main.jpeg"
             alt="eggs"
             className="hero-img"
-            placeholder="tracedSVG"
+            placeholder="Dominant_Color"
             layout="fullWidth"
           ></StaticImage>
           <div className="hero-container">
@@ -22,6 +23,7 @@ export default function Home() {
           </div>
         </header>
       </main>
+      <AllRecipes />
     </Layout>
   )
 }
