@@ -1,7 +1,26 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
+import { Link, graphql } from "gatsby";
+import RecipesList from "../components/RecipesList";
 
-const Contact = () => {
+export const data = graphql`
+  {
+    allContentfulRecipe(filter: { featured: { eq: true } }) {
+      nodes {
+        title
+        cookTime
+        prepTime
+        image {
+          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
+        }
+      }
+      totalCount
+    }
+  }
+`;
+
+const Contact = ({ data }) => {
+  const recipes = data.allContentfulRecipe.nodes;
   return (
     <Layout>
       <main className="page">
@@ -59,9 +78,13 @@ const Contact = () => {
             </form>
           </article>
         </section>
+        <section className="featured-recipes">
+          <h5>Loot at this Awesome!</h5>
+          <RecipesList recipes={recipes} />
+        </section>
       </main>
     </Layout>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
